@@ -1,12 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from multiprocessing import context
-from ProyectoFinal.ProyectoFinal.blog.models import Autor, Seccion
 from blog.forms import ArticuloForm, AutorForm, SeccionForm
 from blog.models import Articulo, Autor, Seccion
-
-# Create your views here.
-
 
 def mostrar_inicio(request):
     return HttpResponse("Bienvenidos al inicio")
