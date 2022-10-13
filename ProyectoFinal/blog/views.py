@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from multiprocessing import context
+from ProyectoFinal.ProyectoFinal.blog.models import Autor, Seccion
 from blog.forms import ArticuloForm, AutorForm, SeccionForm
 from blog.models import Articulo, Autor, Seccion
 
@@ -88,3 +89,4 @@ def buscar(request):
         resultados_de_busqueda = Articulo.objects.filter(titulo=titulo_para_buscar)
         contexto = {"resultados": resultados_de_busqueda}
         return render(request, "blog/resultados-de-la-busqueda.html", context=contexto)
+
